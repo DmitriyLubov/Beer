@@ -56,15 +56,39 @@
 		B664117729C9A5A2007E57C3 /* Beer */ = {
 			isa = PBXGroup;
 			children = (
-				B664117829C9A5A2007E57C3 /* AppDelegate.swift */,
-				B664117A29C9A5A2007E57C3 /* SceneDelegate.swift */,
-				B664117C29C9A5A2007E57C3 /* ViewController.swift */,
-				B664117E29C9A5A2007E57C3 /* Main.storyboard */,
+				B664118E29C9A656007E57C3 /* ViewControllers */,
+				B664118D29C9A638007E57C3 /* Storyboards */,
+				B664118C29C9A5FF007E57C3 /* App */,
 				B664118129C9A5A4007E57C3 /* Assets.xcassets */,
-				B664118329C9A5A4007E57C3 /* LaunchScreen.storyboard */,
-				B664118629C9A5A4007E57C3 /* Info.plist */,
 			);
 			path = Beer;
+			sourceTree = "<group>";
+		};
+		B664118C29C9A5FF007E57C3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B664117829C9A5A2007E57C3 /* AppDelegate.swift */,
+				B664117A29C9A5A2007E57C3 /* SceneDelegate.swift */,
+				B664118629C9A5A4007E57C3 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B664118D29C9A638007E57C3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B664117E29C9A5A2007E57C3 /* Main.storyboard */,
+				B664118329C9A5A4007E57C3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B664118E29C9A656007E57C3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B664117C29C9A5A2007E57C3 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +313,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P932KNVGR6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Beer/Info.plist;
+				INFOPLIST_FILE = Beer/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +326,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Lubov.Beer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +344,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P932KNVGR6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Beer/Info.plist;
+				INFOPLIST_FILE = Beer/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +357,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Lubov.Beer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

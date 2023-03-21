@@ -13,6 +13,7 @@
 		B664118029C9A5A2007E57C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B664117E29C9A5A2007E57C3 /* Main.storyboard */; };
 		B664118229C9A5A4007E57C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B664118129C9A5A4007E57C3 /* Assets.xcassets */; };
 		B664118529C9A5A4007E57C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B664118329C9A5A4007E57C3 /* LaunchScreen.storyboard */; };
+		B664119129C9A9D7007E57C3 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B664119029C9A9D7007E57C3 /* Beer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B664118129C9A5A4007E57C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B664118429C9A5A4007E57C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B664118629C9A5A4007E57C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B664119029C9A9D7007E57C3 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				B664118E29C9A656007E57C3 /* ViewControllers */,
+				B664118F29C9A9A2007E57C3 /* Models */,
 				B664118D29C9A638007E57C3 /* Storyboards */,
 				B664118C29C9A5FF007E57C3 /* App */,
 				B664118129C9A5A4007E57C3 /* Assets.xcassets */,
@@ -89,6 +92,14 @@
 				B664117C29C9A5A2007E57C3 /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B664118F29C9A9A2007E57C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B664119029C9A9D7007E57C3 /* Beer.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 				B664117D29C9A5A2007E57C3 /* ViewController.swift in Sources */,
 				B664117929C9A5A2007E57C3 /* AppDelegate.swift in Sources */,
 				B664117B29C9A5A2007E57C3 /* SceneDelegate.swift in Sources */,
+				B664119129C9A9D7007E57C3 /* Beer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

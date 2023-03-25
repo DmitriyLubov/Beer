@@ -15,19 +15,19 @@ final class BeerCollectionViewCell: UICollectionViewCell {
     private let networkManager = NetworkManager.shared
     
     func configure(with beer: Beer) {
-        imageWillAppear()
+        imageWillLoad()
         fetchImage(from: beer.imageUrl)
     }
 }
 
 // MARK: - Private Methods
 private extension BeerCollectionViewCell {
-    func imageWillAppear() {
+    func imageWillLoad() {
         imageBeer.isHidden = true
         activityIndicator.startAnimating()
     }
     
-    func imageDidAppear() {
+    func imageDidLoad() {
         imageBeer.isHidden = false
         activityIndicator.stopAnimating()
     }
@@ -37,12 +37,12 @@ private extension BeerCollectionViewCell {
             switch result {
             case .success(let imageData):
                 self?.imageBeer.image = UIImage(data: imageData)
-                self?.imageDidAppear()
+                self?.imageDidLoad()
             case .failure(_):
                 DispatchQueue.main.async {
                     self?.imageBeer.image = UIImage(systemName: "camera")
                     self?.imageBeer.tintColor = .white
-                    self?.imageDidAppear()
+                    self?.imageDidLoad()
                 }
             }
         }

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wGA-P3-FVl">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -97,7 +96,7 @@
                                         <rect key="frame" x="0.0" y="359" width="361" height="235"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -119,7 +118,7 @@
                             <constraint firstItem="QQV-kT-J3o" firstAttribute="trailing" secondItem="e78-NO-mQG" secondAttribute="trailing" constant="16" id="mQx-IE-hDj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Beer" image="wineglass" catalog="system" id="MNz-u1-iAI"/>
+                    <tabBarItem key="tabBarItem" title="Beer" image="mug" catalog="system" id="MNz-u1-iAI"/>
                     <connections>
                         <outlet property="activityIndicator" destination="9v1-mb-Qjh" id="tFf-nb-9l6"/>
                         <outlet property="beerImage" destination="9AY-Ae-EqH" id="wGB-DD-jaT"/>
@@ -131,6 +130,63 @@
             </objects>
             <point key="canvasLocation" x="855.72519083969462" y="722.53521126760563"/>
         </scene>
+        <!--Snacks-->
+        <scene sceneID="NZl-sF-ofJ">
+            <objects>
+                <viewController id="N80-6l-h24" customClass="SnackViewController" customModule="Beer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U6q-lN-zgE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2vg-A0-1sn">
+                                <rect key="frame" x="16" y="155" width="361" height="594"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjY-bx-0W2">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="40.666666666666664"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="textColor" red="1" green="0.89411764709999997" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snecks" translatesAutoresizingMaskIntoConstraints="NO" id="O0J-35-HZx">
+                                        <rect key="frame" x="0.0" y="50.666666666666657" width="361" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="yiq-lb-hYW"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1zb-QT-uf2">
+                                        <rect key="frame" x="0.0" y="260.66666666666674" width="361" height="333.33333333333326"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mjs-xm-p25"/>
+                        <color key="backgroundColor" red="0.80392158030000005" green="0.52156865600000002" blue="0.2470588088" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="mjs-xm-p25" firstAttribute="bottom" secondItem="2vg-A0-1sn" secondAttribute="bottom" constant="20" id="4Oy-vf-Qk7"/>
+                            <constraint firstItem="2vg-A0-1sn" firstAttribute="top" secondItem="mjs-xm-p25" secondAttribute="top" id="OuJ-eb-aRi"/>
+                            <constraint firstItem="2vg-A0-1sn" firstAttribute="leading" secondItem="mjs-xm-p25" secondAttribute="leading" constant="16" id="YYa-wa-XaD"/>
+                            <constraint firstItem="mjs-xm-p25" firstAttribute="trailing" secondItem="2vg-A0-1sn" secondAttribute="trailing" constant="16" id="rv6-Rj-bDx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Snacks" image="light.recessed.inverse" catalog="system" id="705-Tm-gEL"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="bjY-bx-0W2" id="Uyh-Kg-1vt"/>
+                        <outlet property="snackTextView" destination="1zb-QT-uf2" id="y2e-B7-6xd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PiV-W0-E7C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672.5190839694656" y="722.53521126760563"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="HKp-eJ-cVg">
             <objects>
@@ -139,6 +195,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="S1s-C8-wjG">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.89411764705882346" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.80392156862745101" green="0.52156862745098043" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="0.89411764705882346" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -166,9 +223,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="0.89411764705882346" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.80392156862745101" green="0.52156862745098043" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="tvw-CX-K9o" kind="relationship" relationship="viewControllers" id="BiW-tu-qDn"/>
+                        <segue destination="N80-6l-h24" kind="relationship" relationship="viewControllers" id="NLE-69-E4r"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Up-Jb-zVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -177,7 +236,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="wineglass" catalog="system" width="95" height="128"/>
+        <image name="light.recessed.inverse" catalog="system" width="128" height="79"/>
+        <image name="mug" catalog="system" width="128" height="125"/>
+        <image name="snecks" width="1200" height="800"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

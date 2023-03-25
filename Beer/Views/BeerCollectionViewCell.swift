@@ -38,8 +38,10 @@ private extension BeerCollectionViewCell {
             case .success(let imageData):
                 self?.imageBeer.image = UIImage(data: imageData)
             case .failure(_):
-                self?.imageBeer.image = UIImage(systemName: "camera")
-                self?.imageBeer.tintColor = .white
+                DispatchQueue.main.async {
+                    self?.imageBeer.image = UIImage(systemName: "camera")
+                    self?.imageBeer.tintColor = .white
+                }
             }
             self?.imageDidAppear()
         }

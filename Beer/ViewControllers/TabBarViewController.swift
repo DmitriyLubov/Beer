@@ -21,7 +21,9 @@ final class TabBarViewController: UITabBarController {
 // MARK: - Private Methods
 private extension TabBarViewController {
     func setupViewControllers() {
-        viewControllers?.forEach { view in
+        guard let viewControllers else { return }
+        
+        viewControllers.forEach { view in
             if let beerInfoVC = view as? BeerInfoViewController {
                 beerInfoVC.beer = beer
             } else if let snackVC = view as? SnackViewController {

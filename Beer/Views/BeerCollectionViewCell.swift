@@ -20,6 +20,8 @@ final class BeerCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with beer: Beer) {
+        imageWillApear()
+        fetchImage(from: beer.imageUrl)
     }
 }
 

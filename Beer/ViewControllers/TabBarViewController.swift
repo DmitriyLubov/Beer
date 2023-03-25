@@ -14,21 +14,21 @@ final class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupTabBar()
         setupViewControllers()
     }
 }
 
 // MARK: - Private Methods
 private extension TabBarViewController {
-    func setupTabBar() {
-        let tabBarAppearance = UITabBarAppearance()
-        tabBarAppearance.configureWithOpaqueBackground()
-        tabBar.standardAppearance = tabBarAppearance
-        tabBar.scrollEdgeAppearance = tabBarAppearance
-    }
-    
     func setupViewControllers() {
-        print(beer ?? "Beer")
+        viewControllers?.forEach { view in
+            if let beerInfoVC = view as? BeerInfoViewController {
+                beerInfoVC.beer = beer
+            } else if let snackVC = view as? SnackViewController {
+                snackVC.beer = beer
+            } else if let recipeVC = view as? RecipeViewController {
+                recipeVC.beer = beer
+            }
+        }
     }
 }

@@ -37,13 +37,14 @@ private extension BeerCollectionViewCell {
             switch result {
             case .success(let imageData):
                 self?.imageBeer.image = UIImage(data: imageData)
+                self?.imageDidAppear()
             case .failure(_):
                 DispatchQueue.main.async {
                     self?.imageBeer.image = UIImage(systemName: "camera")
                     self?.imageBeer.tintColor = .white
+                    self?.imageDidAppear()
                 }
             }
-            self?.imageDidAppear()
         }
     }
 }

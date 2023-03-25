@@ -10,7 +10,7 @@ import UIKit
 final class BeerCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var imageBeer: UIImageView!
+    @IBOutlet var beerImage: UIImageView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     private let networkManager = NetworkManager.shared
@@ -27,13 +27,13 @@ final class BeerCollectionViewCell: UICollectionViewCell {
 private extension BeerCollectionViewCell {
     func imageWillLoad() {
         nameLabel.isHidden = true
-        imageBeer.isHidden = true
+        beerImage.isHidden = true
         activityIndicator.startAnimating()
     }
     
     func imageDidLoad() {
         nameLabel.isHidden = false
-        imageBeer.isHidden = false
+        beerImage.isHidden = false
         activityIndicator.stopAnimating()
     }
     
@@ -41,12 +41,12 @@ private extension BeerCollectionViewCell {
         networkManager.fetchImage(from: url) { [weak self] result in
             switch result {
             case .success(let imageData):
-                self?.imageBeer.image = UIImage(data: imageData)
+                self?.beerImage.image = UIImage(data: imageData)
                 self?.imageDidLoad()
             case .failure(_):
                 DispatchQueue.main.async {
-                    self?.imageBeer.image = UIImage(systemName: "camera")
-                    self?.imageBeer.tintColor = .white
+                    self?.beerImage.image = UIImage(systemName: "camera")
+                    self?.beerImage.tintColor = .white
                     self?.imageDidLoad()
                 }
             }

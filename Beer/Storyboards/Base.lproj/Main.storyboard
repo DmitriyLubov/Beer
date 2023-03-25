@@ -67,7 +67,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="activityIndicator" destination="MLJ-Ru-Ko5" id="MmW-33-phN"/>
-                                    <outlet property="imageBeer" destination="obz-Ca-jzU" id="7Fg-sK-Mfe"/>
+                                    <outlet property="beerImage" destination="obz-Ca-jzU" id="7Fg-sK-Mfe"/>
                                     <outlet property="nameLabel" destination="z24-Dr-m2b" id="3mn-Vc-FHT"/>
                                     <segue destination="vyg-DQ-JGB" kind="show" id="Uum-US-W6R"/>
                                 </connections>

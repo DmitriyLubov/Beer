@@ -16,6 +16,14 @@ final class BeerCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         fetchBeers()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBarVC = segue.destination as? TabBarViewController
+        
+        guard let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
+        
+        tabBarVC?.beer = beers[indexPath.item]
+    }
 }
 
 // MARK: - UICollectionViewDataSource

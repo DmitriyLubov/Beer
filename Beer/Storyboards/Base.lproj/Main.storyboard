@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wGA-P3-FVl">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -81,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e78-NO-mQG">
-                                <rect key="frame" x="16" y="175" width="361" height="574"/>
+                                <rect key="frame" x="16" y="155" width="361" height="594"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4S-tQ-vcq">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="40.666666666666664"/>
@@ -90,13 +91,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9AY-Ae-EqH">
-                                        <rect key="frame" x="0.0" y="50.666666666666657" width="361" height="249.99999999999997"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="QjI-fG-VNG"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="50.666666666666657" width="361" height="298.33333333333337"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yb1-Wj-B5Z">
-                                        <rect key="frame" x="0.0" y="310.66666666666674" width="361" height="263.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="359" width="361" height="235"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -105,16 +103,17 @@
                                 </subviews>
                             </stackView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9v1-mb-Qjh">
-                                <rect key="frame" x="178" y="335" width="37" height="37"/>
+                                <rect key="frame" x="178" y="290" width="37" height="37"/>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QQV-kT-J3o"/>
                         <color key="backgroundColor" red="0.80392156862745101" green="0.52156862745098043" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="e78-NO-mQG" firstAttribute="top" secondItem="QQV-kT-J3o" secondAttribute="top" constant="20" id="0lA-iu-O3n"/>
+                            <constraint firstItem="e78-NO-mQG" firstAttribute="top" secondItem="QQV-kT-J3o" secondAttribute="top" id="0lA-iu-O3n"/>
                             <constraint firstItem="e78-NO-mQG" firstAttribute="leading" secondItem="QQV-kT-J3o" secondAttribute="leading" constant="16" id="5Iz-oZ-LJH"/>
-                            <constraint firstItem="9v1-mb-Qjh" firstAttribute="top" secondItem="QQV-kT-J3o" secondAttribute="top" constant="180" id="5Sl-P7-VQg"/>
+                            <constraint firstItem="9v1-mb-Qjh" firstAttribute="top" secondItem="QQV-kT-J3o" secondAttribute="top" constant="135" id="5Sl-P7-VQg"/>
+                            <constraint firstItem="9AY-Ae-EqH" firstAttribute="height" secondItem="oSE-o1-Qtw" secondAttribute="height" multiplier="0.35" id="ALB-jm-cgL"/>
                             <constraint firstItem="9v1-mb-Qjh" firstAttribute="centerX" secondItem="oSE-o1-Qtw" secondAttribute="centerX" id="HkK-sU-ARZ"/>
                             <constraint firstItem="QQV-kT-J3o" firstAttribute="bottom" secondItem="e78-NO-mQG" secondAttribute="bottom" constant="20" id="NPV-Dn-JDI"/>
                             <constraint firstItem="QQV-kT-J3o" firstAttribute="trailing" secondItem="e78-NO-mQG" secondAttribute="trailing" constant="16" id="mQx-IE-hDj"/>

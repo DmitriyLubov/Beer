@@ -14,25 +14,20 @@ final class BeerCollectionViewCell: UICollectionViewCell {
     
     private let networkManager = NetworkManager.shared
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        activityIndicator.hidesWhenStopped = true
-    }
-    
     func configure(with beer: Beer) {
-        imageWillApear()
+        imageWillAppear()
         fetchImage(from: beer.imageUrl)
     }
 }
 
 // MARK: - Private Methods
 private extension BeerCollectionViewCell {
-    func imageWillApear() {
+    func imageWillAppear() {
         imageBeer.isHidden = true
         activityIndicator.startAnimating()
     }
     
-    func imageDidApear() {
+    func imageDidAppear() {
         imageBeer.isHidden = false
         activityIndicator.stopAnimating()
     }
@@ -46,7 +41,7 @@ private extension BeerCollectionViewCell {
                 self?.imageBeer.image = UIImage(systemName: "camera")
                 self?.imageBeer.tintColor = .white
             }
-            self?.imageDidApear()
+            self?.imageDidAppear()
         }
     }
 }

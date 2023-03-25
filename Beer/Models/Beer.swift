@@ -9,14 +9,14 @@ import Foundation
 
 struct Beer: Decodable {
     let name: String
-    let image_url: URL
-    let description: String
+    let imageUrl: URL
+    let beerInfo: String
     
-    let abv: Double
-    let food_pairing: [String]
+    let alcohol: Double
+    let snacks: [String]
 
-    let ingredients: Recipe
-    let brewers_tips: String
+    let recipe: Recipe
+    let brewersTip: String
 }
 
 struct Recipe: Decodable {
@@ -30,7 +30,7 @@ struct Ingredient: Decodable {
 }
 
 extension Beer {
-    enum CodinKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case name
         case imageUrl = "image_url"
         case beerInfo = "description"

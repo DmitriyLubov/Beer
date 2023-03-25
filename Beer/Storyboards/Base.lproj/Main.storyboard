@@ -1,32 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wGA-P3-FVl">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Beer Collection-->
+        <scene sceneID="yon-Dw-C0w">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Beer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <collectionViewController id="Qr9-RJ-BFi" customClass="BeerCollectionViewController" customModule="Beer" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="TKy-Pk-1Ch">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.80392156862745101" green="0.52156862745098043" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zZr-d6-vnb">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="16" minY="20" maxX="16" maxY="20"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="beerCell" id="Sgs-Uc-tC5" customClass="BeerCollectionViewCell" customModule="Beer" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LTP-9g-x5I">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="obz-Ca-jzU">
+                                            <rect key="frame" x="5" y="5" width="118" height="118"/>
+                                        </imageView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="MLJ-Ru-Ko5">
+                                            <rect key="frame" x="45.666666666666657" y="45.666666666666657" width="37" height="37"/>
+                                            <color key="color" red="0.80392156862745101" green="0.52156862745098043" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="0.89411764705882346" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstItem="obz-Ca-jzU" firstAttribute="leading" secondItem="LTP-9g-x5I" secondAttribute="leading" constant="5" id="5YN-oI-gP1"/>
+                                        <constraint firstAttribute="trailing" secondItem="obz-Ca-jzU" secondAttribute="trailing" constant="5" id="U0B-fA-sQ6"/>
+                                        <constraint firstAttribute="bottom" secondItem="obz-Ca-jzU" secondAttribute="bottom" constant="5" id="Va3-YW-P4k"/>
+                                        <constraint firstItem="MLJ-Ru-Ko5" firstAttribute="centerX" secondItem="LTP-9g-x5I" secondAttribute="centerX" id="Yal-bS-qCN"/>
+                                        <constraint firstItem="obz-Ca-jzU" firstAttribute="top" secondItem="LTP-9g-x5I" secondAttribute="top" constant="5" id="fQl-uU-kWP"/>
+                                        <constraint firstItem="MLJ-Ru-Ko5" firstAttribute="centerY" secondItem="LTP-9g-x5I" secondAttribute="centerY" id="qah-CG-xaa"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="MLJ-Ru-Ko5" id="MmW-33-phN"/>
+                                    <outlet property="imageBeer" destination="obz-Ca-jzU" id="7Fg-sK-Mfe"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Qr9-RJ-BFi" id="WiI-kd-sDd"/>
+                            <outlet property="delegate" destination="Qr9-RJ-BFi" id="8K1-GK-5qW"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Beer Collection" id="Bg3-gK-Qak"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GWd-0K-23S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="-17"/>
+            <point key="canvasLocation" x="1008.3969465648854" y="-14.084507042253522"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HKp-eJ-cVg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wGA-P3-FVl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="S1s-C8-wjG">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.80392156862745101" green="0.52156862745098043" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="0.89411764705882346" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="0.89411764705882346" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qr9-RJ-BFi" kind="relationship" relationship="rootViewController" id="1md-YC-v67"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Di2-gU-sA5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81.679389312977094" y="-14.084507042253522"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

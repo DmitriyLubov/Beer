@@ -17,6 +17,36 @@ struct Beer: Decodable {
 
     let recipe: Recipe
     let brewersTip: String
+    
+    var descriptionBeer: String {
+        """
+        Alcohol: \(alcohol)% abv
+        
+        \(beerInfo)
+        """
+    }
+    
+    var descriptionSnack: String {
+        """
+        Food pairing:
+         - \(snacks.map { $0 }.joined(separator: "\n - "))
+        """
+    }
+    
+    var descriptionRecipe: String {
+        """
+        Ingredients:
+            malt:
+             - \(recipe.malt.map { $0.name }.joined(separator: "\n     - "))
+            hops:
+             - \(recipe.hops.map { $0.name }.joined(separator: "\n     - "))
+            yeast:
+             - \(recipe.yeast)
+        
+        Brewers tips:
+        \(brewersTip)
+        """
+    }
 }
 
 struct Recipe: Decodable {

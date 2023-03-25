@@ -62,9 +62,23 @@ extension BeerCollectionViewController {
             case .success(let beers):
                 self?.beers = beers
                 self?.collectionView.reloadData()
-            case .failure(let error):
-                print(error)
+            case .failure(_):
+                DispatchQueue.main.async {
+                    self?.showAlert(withTitle: "No Data!", andMessage: "Try again later")
+                }
             }
         }
+    }
+}
+
+// MARK: - UIAlertController
+private extension BeerCollectionViewController {
+    func showAlert(withTitle title: String, andMessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        
+        alert.addAction(okAction)
+        
+        present(alert, animated: true)
     }
 }

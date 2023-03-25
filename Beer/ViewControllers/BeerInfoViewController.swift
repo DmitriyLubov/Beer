@@ -10,8 +10,10 @@ import UIKit
 final class BeerInfoViewController: UIViewController {
     
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var beerImage: UIImageView!
     @IBOutlet var beerInfoTV: UITextView!
+    
+    @IBOutlet var beerImage: UIImageView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     var beer: Beer!
     
@@ -27,6 +29,8 @@ final class BeerInfoViewController: UIViewController {
 // MARK: - Private Methods
 private extension BeerInfoViewController {
     func setupView() {
+        activityIndicator.startAnimating()
+        
         nameLabel.text = beer.name
         beerInfoTV.text = beer.descriptionBeer
         
@@ -38,10 +42,12 @@ private extension BeerInfoViewController {
             switch result {
             case .success(let imageData):
                 self?.beerImage.image = UIImage(data: imageData)
+                self?.activityIndicator.stopAnimating()
             case .failure(_):
                 DispatchQueue.main.async {
                     self?.beerImage.image = UIImage(systemName: "camera")
                     self?.beerImage.tintColor = .white
+                    self?.activityIndicator.stopAnimating()
                 }
             }
         }

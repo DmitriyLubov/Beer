@@ -9,12 +9,15 @@ import UIKit
 
 final class BeerCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var imageBeer: UIImageView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     private let networkManager = NetworkManager.shared
     
     func configure(with beer: Beer) {
+        nameLabel.text = beer.name
+        
         imageWillLoad()
         fetchImage(from: beer.imageUrl)
     }
@@ -23,11 +26,13 @@ final class BeerCollectionViewCell: UICollectionViewCell {
 // MARK: - Private Methods
 private extension BeerCollectionViewCell {
     func imageWillLoad() {
+        nameLabel.isHidden = true
         imageBeer.isHidden = true
         activityIndicator.startAnimating()
     }
     
     func imageDidLoad() {
+        nameLabel.isHidden = false
         imageBeer.isHidden = false
         activityIndicator.stopAnimating()
     }

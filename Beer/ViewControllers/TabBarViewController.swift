@@ -7,16 +7,28 @@
 
 import UIKit
 
-final class TabBarViewController: UITableViewController {
+final class TabBarViewController: UITabBarController {
     
     var beer: Beer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupTabBar()
         setupViewControllers()
     }
+}
+
+// MARK: - Private Methods
+private extension TabBarViewController {
+    func setupTabBar() {
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        tabBar.standardAppearance = tabBarAppearance
+        tabBar.scrollEdgeAppearance = tabBarAppearance
+    }
     
-    private func setupViewControllers() {
+    func setupViewControllers() {
         print(beer ?? "Beer")
     }
 }

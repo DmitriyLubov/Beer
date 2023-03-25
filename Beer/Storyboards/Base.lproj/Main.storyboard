@@ -72,21 +72,65 @@
             </objects>
             <point key="canvasLocation" x="856" y="-14"/>
         </scene>
-        <!--Item-->
+        <!--Beer-->
         <scene sceneID="KgK-aw-LX7">
             <objects>
-                <viewController id="tvw-CX-K9o" sceneMemberID="viewController">
+                <viewController id="tvw-CX-K9o" customClass="BeerInfoViewController" customModule="Beer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oSE-o1-Qtw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e78-NO-mQG">
+                                <rect key="frame" x="16" y="175" width="361" height="574"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4S-tQ-vcq">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="40.666666666666664"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="textColor" red="1" green="0.89411764705882346" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9AY-Ae-EqH">
+                                        <rect key="frame" x="0.0" y="50.666666666666657" width="361" height="249.99999999999997"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="QjI-fG-VNG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yb1-Wj-B5Z">
+                                        <rect key="frame" x="0.0" y="310.66666666666674" width="361" height="263.33333333333326"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9v1-mb-Qjh">
+                                <rect key="frame" x="178" y="335" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="QQV-kT-J3o"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.80392156862745101" green="0.52156862745098043" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="e78-NO-mQG" firstAttribute="top" secondItem="QQV-kT-J3o" secondAttribute="top" constant="20" id="0lA-iu-O3n"/>
+                            <constraint firstItem="e78-NO-mQG" firstAttribute="leading" secondItem="QQV-kT-J3o" secondAttribute="leading" constant="16" id="5Iz-oZ-LJH"/>
+                            <constraint firstItem="9v1-mb-Qjh" firstAttribute="top" secondItem="QQV-kT-J3o" secondAttribute="top" constant="180" id="5Sl-P7-VQg"/>
+                            <constraint firstItem="9v1-mb-Qjh" firstAttribute="centerX" secondItem="oSE-o1-Qtw" secondAttribute="centerX" id="HkK-sU-ARZ"/>
+                            <constraint firstItem="QQV-kT-J3o" firstAttribute="bottom" secondItem="e78-NO-mQG" secondAttribute="bottom" constant="20" id="NPV-Dn-JDI"/>
+                            <constraint firstItem="QQV-kT-J3o" firstAttribute="trailing" secondItem="e78-NO-mQG" secondAttribute="trailing" constant="16" id="mQx-IE-hDj"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="MNz-u1-iAI"/>
+                    <tabBarItem key="tabBarItem" title="Beer" image="wineglass" catalog="system" id="MNz-u1-iAI"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="9v1-mb-Qjh" id="tFf-nb-9l6"/>
+                        <outlet property="beerImage" destination="9AY-Ae-EqH" id="wGB-DD-jaT"/>
+                        <outlet property="beerInfoTV" destination="Yb1-Wj-B5Z" id="u6s-Y8-ASN"/>
+                        <outlet property="nameLabel" destination="I4S-tQ-vcq" id="bxY-f8-BNJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4M-Tv-ehj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="856" y="723"/>
+            <point key="canvasLocation" x="855.72519083969462" y="722.53521126760563"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HKp-eJ-cVg">
@@ -113,15 +157,16 @@
             </objects>
             <point key="canvasLocation" x="81.679389312977094" y="-14.084507042253522"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--About Beer:-->
         <scene sceneID="iI8-ll-vdS">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vyg-DQ-JGB" customClass="TabBarViewController" customModule="Beer" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="0UE-F9-MP4"/>
+                    <navigationItem key="navigationItem" title="About Beer:" id="0UE-F9-MP4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IBp-Bx-J5D">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.89411764705882346" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="tvw-CX-K9o" kind="relationship" relationship="viewControllers" id="BiW-tu-qDn"/>
@@ -133,8 +178,9 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="wineglass" catalog="system" width="95" height="128"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

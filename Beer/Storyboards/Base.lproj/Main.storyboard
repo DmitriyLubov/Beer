@@ -103,7 +103,7 @@
                                 </subviews>
                             </stackView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9v1-mb-Qjh">
-                                <rect key="frame" x="178" y="290" width="37" height="37"/>
+                                <rect key="frame" x="178" y="379.66666666666669" width="37" height="37"/>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
@@ -112,7 +112,7 @@
                         <constraints>
                             <constraint firstItem="e78-NO-mQG" firstAttribute="top" secondItem="QQV-kT-J3o" secondAttribute="top" id="0lA-iu-O3n"/>
                             <constraint firstItem="e78-NO-mQG" firstAttribute="leading" secondItem="QQV-kT-J3o" secondAttribute="leading" constant="16" id="5Iz-oZ-LJH"/>
-                            <constraint firstItem="9v1-mb-Qjh" firstAttribute="top" secondItem="QQV-kT-J3o" secondAttribute="top" constant="135" id="5Sl-P7-VQg"/>
+                            <constraint firstItem="9v1-mb-Qjh" firstAttribute="top" secondItem="QQV-kT-J3o" secondAttribute="top" multiplier="2.45" id="5Sl-P7-VQg"/>
                             <constraint firstItem="9AY-Ae-EqH" firstAttribute="height" secondItem="oSE-o1-Qtw" secondAttribute="height" multiplier="0.35" id="ALB-jm-cgL"/>
                             <constraint firstItem="9v1-mb-Qjh" firstAttribute="centerX" secondItem="oSE-o1-Qtw" secondAttribute="centerX" id="HkK-sU-ARZ"/>
                             <constraint firstItem="QQV-kT-J3o" firstAttribute="bottom" secondItem="e78-NO-mQG" secondAttribute="bottom" constant="20" id="NPV-Dn-JDI"/>

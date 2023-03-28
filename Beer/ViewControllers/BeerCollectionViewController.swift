@@ -57,15 +57,14 @@ extension BeerCollectionViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - Networking
 extension BeerCollectionViewController {
     private func fetchBeers() {
-        networkManager.fetch([Beer].self, from: Link.beersURL.url) { [weak self] result in
+        networkManager.fetchBeers(from: Link.beersURL.url) { [weak self] result in
             switch result {
-            case .success(let beers):
-                self?.beers = beers
+            case .success(let beersData):
+                self?.beers = beersData
                 self?.collectionView.reloadData()
-            case .failure(_):
-                DispatchQueue.main.async {
-                    self?.showAlert(withTitle: "No Data!", andMessage: "Try again later")
-                }
+            case .failure(let error):
+                print(error)
+                self?.showAlert(withTitle: "No Data!", andMessage: "Try again later")
             }
         }
     }

@@ -37,18 +37,17 @@ private extension BeerCollectionViewCell {
         activityIndicator.stopAnimating()
     }
     
-    func fetchImage(from url: URL) {
+    func fetchImage(from url: String) {
         networkManager.fetchImage(from: url) { [weak self] result in
             switch result {
             case .success(let imageData):
                 self?.beerImage.image = UIImage(data: imageData)
                 self?.imageDidLoad()
-            case .failure(_):
-                DispatchQueue.main.async {
-                    self?.beerImage.image = UIImage(systemName: "camera")
-                    self?.beerImage.tintColor = .white
-                    self?.imageDidLoad()
-                }
+            case .failure(let error):
+                print(error)
+                self?.beerImage.image = UIImage(systemName: "camera")
+                self?.beerImage.tintColor = .white
+                self?.imageDidLoad()
             }
         }
     }

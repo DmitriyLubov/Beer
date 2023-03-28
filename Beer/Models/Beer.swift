@@ -9,7 +9,7 @@ import Foundation
 
 struct Beer: Decodable {
     let name: String
-    let imageUrl: URL
+    let imageUrl: String
     let beerInfo: String
     
     let alcohol: Double
@@ -47,26 +47,54 @@ struct Beer: Decodable {
         \(brewersTip)
         """
     }
+    
+    init(beersData: [String: Any]) {
+        name = beersData["name"] as? String ?? ""
+        imageUrl = beersData["image_url"] as? String ?? ""
+        beerInfo = beersData["description"] as? String ?? ""
+        alcohol = beersData["abv"] as? Double ?? 0.0
+        snacks = beersData["food_pairing"] as? [String] ?? []
+        recipe = Recipe.getRecipe(from: beersData["ingredients"])
+        brewersTip = beersData["brewers_tips"] as? String ?? ""
+    }
+    
+    static func getBeers(from value: Any) -> [Beer] {
+        guard let beersData = value as? [[String: Any]] else { return [] }
+        
+        return beersData.map { Beer(beersData: $0) }
+    }
 }
 
 struct Recipe: Decodable {
     let malt: [Ingredient]
     let hops: [Ingredient]
     let yeast: String
+    
+    init(recipeData: [String: Any]) {
+        malt = Ingredient.getIngredients(from: recipeData["malt"])
+        hops = Ingredient.getIngredients(from: recipeData["hops"])
+        yeast = recipeData["yeast"] as? String ?? ""
+    }
+    
+    static func getRecipe(from value: Any?) -> Recipe {
+        guard let recipeData = value as? [String: Any] else {
+            return Recipe(recipeData: [:])
+        }
+        
+        return Recipe(recipeData: recipeData)
+    }
 }
 
 struct Ingredient: Decodable {
     let name: String
-}
-
-extension Beer {
-    enum CodingKeys: String, CodingKey {
-        case name
-        case imageUrl = "image_url"
-        case beerInfo = "description"
-        case alcohol = "abv"
-        case snacks = "food_pairing"
-        case recipe = "ingredients"
-        case brewersTip = "brewers_tips"
+    
+    init(ingredientData: [String: Any]) {
+        name = ingredientData["name"] as? String ?? ""
+    }
+    
+    static func getIngredients(from value: Any?) -> [Ingredient] {
+        guard let ingredientData = value as? [[String: Any]] else { return [] }
+        
+        return ingredientData.map { Ingredient(ingredientData: $0) }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Beer: Decodable {
+struct Beer {
     let name: String
     let imageUrl: String
     let beerInfo: String
@@ -65,7 +65,7 @@ struct Beer: Decodable {
     }
 }
 
-struct Recipe: Decodable {
+struct Recipe {
     let malt: [Ingredient]
     let hops: [Ingredient]
     let yeast: String
@@ -85,7 +85,7 @@ struct Recipe: Decodable {
     }
 }
 
-struct Ingredient: Decodable {
+struct Ingredient {
     let name: String
     
     init(ingredientData: [String: Any]) {

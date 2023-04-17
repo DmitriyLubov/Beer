@@ -11,7 +11,7 @@ protocol StackViewFactory {
     func createStackView() -> UIStackView
 }
 
-class VerticalStackViewFactory: StackViewFactory {
+final class VerticalStackViewFactory: StackViewFactory {
     let subViews: [UIView]
     let spacing: CGFloat
     

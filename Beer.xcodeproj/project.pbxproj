@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B61B26EE29CF6C1B00334745 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B26ED29CF6C1B00334745 /* RecipeViewController.swift */; };
 		B626019529D1AFB500ADED76 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B626019429D1AFB500ADED76 /* Alamofire */; };
+		B638D70629ECDEDF004FDFFC /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638D70529ECDEDF004FDFFC /* ImageView.swift */; };
 		B63C2A0329CE8B3700409DD1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C2A0229CE8B3700409DD1 /* NetworkManager.swift */; };
 		B63C2A0829CEB49400409DD1 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C2A0729CEB49400409DD1 /* BeerCollectionViewCell.swift */; };
 		B63C2A0A29CEC82300409DD1 /* BeerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C2A0929CEC82300409DD1 /* BeerCollectionViewController.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		B61B26ED29CF6C1B00334745 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		B638D70529ECDEDF004FDFFC /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		B63C2A0229CE8B3700409DD1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B63C2A0729CEB49400409DD1 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		B63C2A0929CEC82300409DD1 /* BeerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				B63C2A0729CEB49400409DD1 /* BeerCollectionViewCell.swift */,
 				B68D78CF29E82DAF00C3BFE9 /* StackView.swift */,
 				B691FDCA29EB992F0027FFB6 /* Label.swift */,
+				B638D70529ECDEDF004FDFFC /* ImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				B68D78D029E82DAF00C3BFE9 /* StackView.swift in Sources */,
 				B691FDCB29EB992F0027FFB6 /* Label.swift in Sources */,
 				B664117929C9A5A2007E57C3 /* AppDelegate.swift in Sources */,
+				B638D70629ECDEDF004FDFFC /* ImageView.swift in Sources */,
 				B63C2A0A29CEC82300409DD1 /* BeerCollectionViewController.swift in Sources */,
 				B63C2A0829CEB49400409DD1 /* BeerCollectionViewCell.swift in Sources */,
 				B61B26EE29CF6C1B00334745 /* RecipeViewController.swift in Sources */,
